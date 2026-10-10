@@ -1,0 +1,804 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Indonesia Pet-Care Market Opportunity — Starting with Cat Litter</title>
+<link rel="stylesheet" href="styles.css" />
+<script src="auth.js"></script>
+</head>
+<body>
+
+<!-- ============ password gate (client-side only — see auth.js) ============ -->
+<div id="authGate">
+  <div class="auth-card">
+    <h1 data-i18n="auth.title">Private Proposal</h1>
+    <p data-i18n="auth.subtitle">Enter the password to view this document.</p>
+    <form id="authForm">
+      <input type="password" id="authPassword" data-i18n-placeholder="auth.placeholder" placeholder="Password" autocomplete="current-password" required />
+      <button type="submit" data-i18n="auth.unlock">Unlock</button>
+      <p class="auth-card__error" id="authError" data-i18n="auth.error">Incorrect password — try again.</p>
+    </form>
+  </div>
+</div>
+
+<div id="siteContent">
+
+<!-- ============ icon sprite ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></symbol>
+    <symbol id="i-trending-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></symbol>
+    <symbol id="i-paw" viewBox="0 0 24 24" fill="currentColor" stroke="none"><circle cx="7" cy="9" r="2.1"/><circle cx="12" cy="6.3" r="2.1"/><circle cx="17" cy="9" r="2.1"/><path d="M12 12.3c-3.4 0-6 2.1-6 4.8 0 1.7 1.4 2.9 3.1 2.9 1.2 0 1.9-0.7 2.9-0.7s1.7 0.7 2.9 0.7c1.7 0 3.1-1.2 3.1-2.9 0-2.7-2.6-4.8-6-4.8z"/></symbol>
+    <symbol id="i-store" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 7v13a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7l-3-5z"/><path d="M3 7h18"/><path d="M8 11a4 4 0 0 0 8 0"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-package" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8v8l9 5 9-5V8z"/><path d="M3 8l9 5 9-5"/><line x1="12" y1="13" x2="12" y2="21"/></symbol>
+    <symbol id="i-shield-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5l-8-3z"/><line x1="12" y1="8" x2="12" y2="13"/><circle cx="12" cy="16.3" r="0.6" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-repeat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-check-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="8 12.5 11 15.5 16 9"/></symbol>
+    <symbol id="i-alert-triangle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 20h20L12 3z"/><line x1="12" y1="9" x2="12" y2="14"/><circle cx="12" cy="17" r="0.6" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6l6-2 6 2 6-2v15l-6 2-6-2-6 2V6z"/><line x1="9" y1="4" x2="9" y2="19"/><line x1="15" y1="6" x2="15" y2="21"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 21 7.5 12 13 3 7.5 12 2"/><polyline points="3 13 12 18.5 21 13"/></symbol>
+    <symbol id="i-pie-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3v9l7.8 3.8"/></symbol>
+    <symbol id="i-bar-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></symbol>
+    <symbol id="i-lightbulb" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7c.5.4.8 1 .9 1.6l.1.7h6l.1-.7c.1-.6.4-1.2.9-1.6A7 7 0 0 0 12 2z"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><line x1="12" y1="11" x2="12" y2="16"/><circle cx="12" cy="7.5" r="0.6" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-sliders" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/></symbol>
+    <symbol id="i-chevron-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></symbol>
+    <symbol id="i-help-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.1 9a3 3 0 1 1 4.6 2.5c-.9.5-1.7 1.1-1.7 2.3"/><circle cx="12" cy="17.3" r="0.6" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-wallet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 7V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-2"/><path d="M21 12a2 2 0 0 0-2-2h-3a2 2 0 0 0 0 4h3a2 2 0 0 0 2-2z"/></symbol>
+  </defs>
+</svg>
+
+<!-- ============ nav ============ -->
+<header class="topnav">
+  <div class="topnav__inner">
+    <div class="topnav__brand"><svg class="icon" width="20" height="20"><use href="#i-paw"/></svg> <span data-i18n="nav.brand">Pet-Care Opportunity</span></div>
+    <nav class="topnav__links" id="navLinks">
+      <a href="#market" data-i18n="nav.market">Market Opportunity</a>
+      <a href="#cats" data-i18n="nav.cats">Nekonomic</a>
+      <a href="#why-litter" data-i18n="nav.litter">Why Cat Litter</a>
+      <a href="#pricing" data-i18n="nav.pricing">Pricing</a>
+      <a href="#unit-economics" data-i18n="nav.unitEconomics">Unit Economics</a>
+      <a href="#simulator" data-i18n="nav.simulator">Simulator</a>
+      <a href="#startup-capital" data-i18n="nav.startupCapital">Startup Capital</a>
+      <a href="#growth" data-i18n="nav.growth">Growth</a>
+      <a href="#risks" data-i18n="nav.risks">Risks</a>
+      <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      <a href="#sources" data-i18n="nav.sources">Sources</a>
+    </nav>
+    <div class="locale-switch" role="group" aria-label="Language">
+      <button type="button" data-locale-btn="en">EN</button>
+      <button type="button" data-locale-btn="id">ID</button>
+    </div>
+    <button class="topnav__toggle" id="navToggle" aria-label="Toggle navigation">
+      <svg width="20" height="20"><use href="#i-menu"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- ============ hero ============ -->
+<section class="hero">
+  <div class="container">
+    <div class="hero__eyebrow" data-i18n="hero.eyebrow">Indonesia · Pet-Care Business Opportunity · 2026</div>
+    <h1 data-i18n="hero.title">A Growing Pet Market. A Recurring Consumer Need.</h1>
+    <p class="hero__sub" data-i18n="hero.sub">Exploring the opportunity to build a profitable pet-care business, starting with cat litter. Prepared as a preliminary market-feasibility proposal for a potential business partnership, October 2026.</p>
+
+    <div class="hero__stats">
+      <div class="hero-stat">
+        <div class="hero-stat__value" data-i18n="hero.stat1Value">Rp 10.44T</div>
+        <div class="hero-stat__label" data-i18n="hero.stat1Label">Pet-care market, 2026 forecast</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat__value" data-i18n="hero.stat2Value">5.1M</div>
+        <div class="hero-stat__label" data-i18n="hero.stat2Label">Pet cats in Indonesia, 2023</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat__value">+6%</div>
+        <div class="hero-stat__label" data-i18n="hero.stat3Label">2026 pet-care growth, YoY</div>
+      </div>
+    </div>
+    <p class="hero__sources" data-i18n="hero.sources">Sources: Euromonitor International (June 2026); PetfoodIndustry (2025), drawing on USDA FAS-related research. Figures cover different market definitions and reference years — see <a href="#sources">Sources &amp; Methodology</a>.</p>
+
+    <div class="hero__callout">
+      <p><strong data-i18n="hero.calloutLabel">One important distinction:</strong> <span data-i18n="hero.calloutText">the market research below supports a promising category, but it does not yet prove that a new entrant can earn attractive margins. That is why the financial simulation — not the market stats — is the center of gravity of this proposal.</span></p>
+      <a class="hero__cta" href="#simulator"><span data-i18n="hero.cta">Jump to the profitability simulator</span> <svg width="14" height="14"><use href="#i-trending-up"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 01 Market Opportunity ============ -->
+<section class="page-section" id="market">
+  <div class="container">
+    <div class="section-kicker"><svg width="14" height="14"><use href="#i-layers"/></svg> <span data-i18n="market.kicker">01 · The Opportunity</span></div>
+    <div class="section-head">
+      <h2 data-i18n="market.h2">Why Indonesia's Pet Industry?</h2>
+      <p data-i18n="market.lede">Indonesia's pet-care industry represents a substantial consumer market, with demand supported by pet ownership, changing consumer preferences, and expanding retail access.</p>
+    </div>
+
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="stat-card__top">
+          <span class="stat-card__kicker" data-i18n="market.stat1Kicker">Total pet-care industry</span>
+          <span class="tag tag--forecast" data-i18n="badge.forecast">Forecast</span>
+        </div>
+        <div class="stat-card__value" data-i18n="market.stat1Value">Rp 10.438T</div>
+        <div class="stat-card__growth">▲ +6% year-on-year</div>
+        <p class="stat-card__desc" data-i18n="market.stat1Desc">Forecast 2026 retail value of Indonesia's pet-care market, covering both pet food and pet products.</p>
+        <div class="stat-card__source">
+          <svg width="14" height="14"><use href="#i-external"/></svg>
+          <a href="https://www.euromonitor.com/pet-care-in-indonesia/report" target="_blank" rel="noopener" data-i18n="market.stat1Source">Euromonitor International — Pet Care in Indonesia, June 2026</a>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card__top">
+          <span class="stat-card__kicker" data-i18n="market.stat2Kicker">Pet-products segment</span>
+          <span class="tag tag--forecast" data-i18n="badge.forecast">Forecast</span>
+        </div>
+        <div class="stat-card__value" data-i18n="market.stat2Value">Rp 559B</div>
+        <div class="stat-card__growth">▲ +3% year-on-year</div>
+        <p class="stat-card__desc" data-i18n="market.stat2Desc">Forecast 2026 retail value of pet <em>products</em> only — includes cat litter and other non-food items. Not the size of the cat-litter market alone.</p>
+        <div class="stat-card__source">
+          <svg width="14" height="14"><use href="#i-external"/></svg>
+          <a href="https://www.euromonitor.com/pet-products-in-indonesia/report" target="_blank" rel="noopener" data-i18n="market.stat2Source">Euromonitor International — Pet Products in Indonesia, June 2026</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout mt-24">
+      <p><strong data-i18n="market.calloutLabel">Business interpretation:</strong> <span data-i18n="market.calloutText">the industry already has established consumer spending and distribution channels. We are not proposing to create demand for an unfamiliar product category. Instead, our objective is to enter an existing market with repeat-purchase products, competitive sourcing, and differentiated customer service.</span></p>
+    </div>
+
+    <p class="prose mt-24" data-i18n="market.additionalSource">Additional publicly accessible report summary: <a href="https://www.marketresearch.com/Euromonitor-International-v746/Pet-Products-Indonesia-45430907/" target="_blank" rel="noopener">MarketResearch.com — Pet Products Indonesia <svg width="12" height="12"><use href="#i-external"/></svg></a></p>
+  </div>
+</section>
+
+<!-- ============ 02 Cat Economy ============ -->
+<section class="page-section page-section--alt" id="cats">
+  <div class="container">
+    <div class="section-kicker"><svg width="14" height="14"><use href="#i-paw"/></svg> <span data-i18n="cats.kicker">02 · Why Focus on Cats?</span></div>
+    <div class="section-head">
+      <h2 data-i18n="cats.h2">Cats Represent an Important Part of Indonesia's Pet Economy</h2>
+      <p data-i18n="cats.lede">Industry research indicates that cats represent a large proportion of Indonesia's commercial pet-care demand — drawn from research reported by PetfoodIndustry, citing USDA Foreign Agricultural Service-related research.</p>
+    </div>
+
+    <div class="grid-2">
+      <div class="chart-card">
+        <h4 data-i18n="cats.chart1Title">Cat Food Market Share by Value, 2023</h4>
+        <p class="chart-card__caption"><span data-i18n="cats.chart1Caption">This is a <strong>pet food</strong> statistic, not a cat-litter statistic.</span> <span class="tag tag--historical" data-i18n="badge.historical">Historical</span></p>
+        <div id="chart-cat-share"></div>
+      </div>
+      <div class="chart-card">
+        <h4 data-i18n="cats.chart2Title">Indonesian Cat Food Sales, 2022 → 2023</h4>
+        <p class="chart-card__caption"><span data-i18n="cats.chart2Caption">Again, cat <strong>food</strong> sales — not cat litter. +32.2% growth.</span> <span class="tag tag--historical" data-i18n="badge.historical">Historical</span></p>
+        <div id="chart-cat-food-sales"></div>
+      </div>
+    </div>
+
+    <div class="callout mt-24">
+      <p data-i18n="cats.callout1a">These figures describe the cat <strong>food</strong> market, not cat litter sales. Nevertheless, they demonstrate substantial, growing spending on products purchased specifically for cats — an established consumer category with demand for food, cat litter, hygiene products, treats, grooming products, and toys/accessories.</p>
+      <p data-i18n="cats.callout1b">By starting with cat litter, the proposed business can focus on one product category while retaining the opportunity to expand into complementary pet-care products later.</p>
+    </div>
+
+    <div class="callout callout--unverified mt-24">
+      <p><svg width="14" height="14" style="vertical-align:-2px"><use href="#i-info"/></svg> <strong data-i18n="cats.culturalLabel">A cultural factor worth noting:</strong> <span data-i18n="cats.culturalText">Indonesia is the world's fourth-most-populous country and the most populous Muslim-majority country. Islamic tradition has long regarded cats as clean animals welcome in the home — a view often linked to the Prophet Muhammad's own fondness for cats — while dog ownership carries more religious and cultural restrictions for many Muslim households. Layered on top of Indonesia's large population, this plausibly helps explain cats' dominant share of pet spending shown above.</span></p>
+      <p data-i18n="cats.culturalFootnote">This is cultural context, not a sourced market statistic <span class="tag tag--unverified">Unquantified</span> — we have not found research that isolates its effect on pet-ownership numbers, so treat it as a plausible contributing factor rather than a proven cause.</p>
+    </div>
+
+    <p class="prose mt-24"><span data-i18n="cats.sourcesLabel">Sources:</span>
+      <a href="https://www.petfoodindustry.com/global-commerce/article/15745418/how-cats-stole-indonesias-pet-food-market" target="_blank" rel="noopener"><span data-i18n="cats.source1">PetfoodIndustry — How Cats Stole Indonesia's Pet Food Market, July 10, 2025</span> <svg width="12" height="12"><use href="#i-external"/></svg></a>
+      &nbsp;·&nbsp;
+      <a href="https://www.petfoodindustry.com/regions/central-western-southern-asia/article/15742617/cats-dominate-indonesias-us237-million-pet-food-market" target="_blank" rel="noopener"><span data-i18n="cats.source2">Cats Dominate Indonesia's US$237M Pet Food Market</span> <svg width="12" height="12"><use href="#i-external"/></svg></a>
+    </p>
+  </div>
+</section>
+
+<!-- ============ 03 Why Cat Litter ============ -->
+<section class="page-section" id="why-litter">
+  <div class="container">
+    <div class="section-kicker"><svg width="14" height="14"><use href="#i-repeat"/></svg> <span data-i18n="litter.kicker">03 · Why Cat Litter?</span></div>
+    <div class="section-head">
+      <h2 data-i18n="litter.h2">A Consumable Product with Repeat-Purchase Potential</h2>
+      <p data-i18n="litter.lede">Cat litter is attractive because it is consumed during ordinary pet ownership. Unlike accessories such as carriers or litter boxes, litter requires replenishment — for many indoor-cat owners, it is a regular household expense.</p>
+    </div>
+
+    <div class="compare-cards">
+      <div class="compare-card compare-card--one">
+        <span class="tag tag--assumption" data-i18n="litter.card1Tag">One-time product</span>
+        <h4 data-i18n="litter.card1Title">Pet Carrier</h4>
+        <p data-i18n="litter.card1Text">A customer purchases a pet carrier and may not replace it for years. One sale, then silence.</p>
+      </div>
+      <div class="compare-card compare-card--repeat">
+        <span class="tag tag--verified" data-i18n="litter.card2Tag">Consumable product</span>
+        <h4 data-i18n="litter.card2Title">Cat Litter</h4>
+        <p data-i18n="litter.card2Text">A customer purchases cat litter and may reorder regularly throughout the year — recurring sales, more predictable inventory, and a reason to retain the relationship.</p>
+      </div>
+    </div>
+
+    <div class="flow-model" aria-label="Illustrative annual customer value model">
+      <div class="flow-step"><div class="flow-step__value" data-i18n="litter.flowBags2">2 bags</div><div class="flow-step__label" data-i18n="litter.flowPerMonth">per month</div></div>
+      <span class="flow-arrow">→</span>
+      <div class="flow-step"><div class="flow-step__value" data-i18n="litter.flowBags24">24 bags</div><div class="flow-step__label" data-i18n="litter.flowPerYear">per year</div></div>
+      <span class="flow-arrow">×</span>
+      <div class="flow-step"><div class="flow-step__value" data-i18n="litter.flowPerBagValue">Rp 60,000</div><div class="flow-step__label" data-i18n="litter.flowPerBag">per bag (target price)</div></div>
+      <span class="flow-arrow">=</span>
+      <div class="flow-result"><div class="flow-result__value" data-i18n="litter.flowResultValue">Rp 1,440,000</div><div class="flow-step__label" data-i18n="litter.flowResult">illustrative annual value / customer</div></div>
+    </div>
+    <p class="prose" data-i18n="litter.assumptionText">This is a hypothetical purchasing pattern <span class="tag tag--assumption">Assumption</span> — not a verified Indonesian household average. It illustrates how recurring purchases <em>could</em> generate meaningful annual customer value, if real ordering behavior resembles this pattern.</p>
+
+    <h3 style="font-size:17px;margin:32px 0 6px;" data-i18n="litter.stockH3">Also Easier to Stock Than Pet Food</h3>
+    <p class="prose" style="margin-bottom:6px;" data-i18n="litter.stockLede">Litter is an inert, shelf-stable product, which changes the inventory math compared with the food category discussed above.</p>
+    <div class="compare-cards">
+      <div class="compare-card compare-card--one">
+        <span class="tag tag--assumption" data-i18n="litter.card3Tag">Perishable inventory</span>
+        <h4 data-i18n="litter.card3Title">Pet Food</h4>
+        <p data-i18n="litter.card3Text">Has shelf life, spoilage risk, and potential contamination or recall exposure — stock that doesn't sell in time can become a write-off, not just a slow sale.</p>
+      </div>
+      <div class="compare-card compare-card--repeat">
+        <span class="tag tag--verified" data-i18n="litter.card4Tag">Non-perishable inventory</span>
+        <h4 data-i18n="litter.card4Title">Cat Litter</h4>
+        <p data-i18n="litter.card4Text">Doesn't spoil or expire. If we're carrying more stock than planned, we can simply sell it down more slowly — not race a shelf-life clock or face a health write-off.</p>
+      </div>
+    </div>
+
+    <div class="callout callout--unverified">
+      <p><svg width="14" height="14" style="vertical-align:-2px"><use href="#i-info"/></svg> <strong data-i18n="litter.locationLabel">Location as a cost lever:</strong> <span data-i18n="litter.locationText">because litter doesn't spoil, the main carrying costs of holding more inventory become labor and storage space — the same "Bulky Inventory" risk flagged under <a href="#risks">Key Commercial Risks</a>. Basing warehousing and fulfillment in a lower-cost city such as Bandung, rather than Jakarta, is one practical way to keep both of those costs down. <span class="tag tag--unverified">Not yet quoted</span> — we have not obtained actual Bandung-vs-Jakarta labor or warehouse-rent figures; this is a sourcing location to investigate, not a confirmed saving.</span></p>
+    </div>
+
+    <div class="callout callout--muted mt-24">
+      <p><strong data-i18n="litter.researchLabel">Industry research supporting cat litter:</strong> <span data-i18n="litter.researchText">Euromonitor's June 2026 <em>Pet Products in Indonesia</em> report identifies cat litter as a dynamic category and expects it to remain among the best-performing categories, aided by affordable and premium imported products.</span></p>
+    </div>
+
+    <div class="callout callout--unverified">
+      <p><svg width="14" height="14" style="vertical-align:-2px"><use href="#i-info"/></svg> <strong data-i18n="litter.standaloneLabel">Standalone Indonesian cat-litter market size / growth rate:</strong> <span class="tag tag--unverified" data-i18n="badge.dataNotVerified">Data not yet verified</span> — <span data-i18n="litter.standaloneText">the public Euromonitor summary does not disclose this figure. We have not invented one.</span></p>
+    </div>
+
+    <p class="prose mt-24"><span data-i18n="litter.source">Source:</span> <a href="https://www.euromonitor.com/pet-products-in-indonesia/report" target="_blank" rel="noopener"><span data-i18n="litter.sourceText">Euromonitor International — Pet Products in Indonesia, June 2026</span> <svg width="12" height="12"><use href="#i-external"/></svg></a></p>
+  </div>
+</section>
+
+<!-- ============ 04 Pricing ============ -->
+<section class="page-section page-section--alt" id="pricing">
+  <div class="container">
+    <div class="section-kicker"><svg width="14" height="14"><use href="#i-store"/></svg> <span data-i18n="pricing.kicker">04 · Retail Market Pricing</span></div>
+    <div class="section-head">
+      <h2 data-i18n="pricing.h2">What Are Indonesian Consumers Already Paying?</h2>
+      <p data-i18n="pricing.lede">A preliminary, non-exhaustive review of Shopee Indonesia listings for one comparable product — Life Cat 7L tofu cat litter — reviewed October 2026. These are advertised prices from different sellers, not a market average, transaction data, or a live price feed.</p>
+    </div>
+
+    <div class="chart-card">
+      <h4 data-i18n="pricing.chartTitle">Observed Shopee Listing Prices — Life Cat 7L Tofu Litter</h4>
+      <p class="chart-card__caption"><span data-i18n="pricing.chartCaption">Dashed line marks the hypothetical Rp 60,000 price used in the financial simulation below — a proposed target, not a market average.</span> <span class="tag tag--verified" data-i18n="badge.verifiedListings">Verified listings</span></p>
+      <div id="chart-listings"></div>
+    </div>
+
+    <div class="table-scroll">
+      <table class="data-table listing-table">
+        <caption data-i18n="pricing.tableCaption">Each row links directly to the original Shopee listing.</caption>
+        <thead>
+          <tr><th data-i18n="pricing.thListing">Listing</th><th data-i18n="pricing.thPrice">Advertised price</th><th data-i18n="pricing.thLink">Link</th></tr>
+        </thead>
+        <tbody id="listingTableBody"></tbody>
+      </table>
+    </div>
+
+    <div class="callout mt-24">
+      <p><strong data-i18n="pricing.calloutLabel">Business interpretation:</strong> <span data-i18n="pricing.calloutText">the existence of multiple listings within this price range supports further investigation into the mid-range cat-litter segment. However, we must still verify whether our targeted brands can be sourced at costs low enough to compete while leaving sustainable profit margins — differences across listings may reflect location, fragrance, variant, promotions, or listing conditions rather than a stable "market price."</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 05 Unit Economics ============ -->
+<section class="page-section" id="unit-economics">
+  <div class="container">
+    <div class="section-kicker"><svg width="14" height="14"><use href="#i-pie-chart"/></svg> <span data-i18n="unitEcon.kicker">05 · How the Business Generates Profit</span></div>
+    <div class="section-head">
+      <h2 data-i18n="unitEcon.h2">Unit Economics: Three Levels of Profitability</h2>
+      <p data-i18n="unitEcon.lede">The initial business will operate as a multi-brand pet-care retailer, evaluating two or three cat-litter brands, sold initially through Shopee and other Indonesian marketplaces. A profitable product at the gross-margin level is not necessarily a profitable business — so we track three levels of profit.</p>
+    </div>
+
+    <div class="profit-levels">
+      <div class="profit-level profit-level--1">
+        <h4 data-i18n="unitEcon.level1Title">Gross Profit</h4>
+        <p data-i18n="unitEcon.level1Text">Selling price minus landed product cost. The simplest — and most overstated — measure of profitability.</p>
+        <div class="profit-level__formula" data-i18n="unitEcon.level1Formula">Price − Landed Cost</div>
+      </div>
+      <div class="profit-level profit-level--2">
+        <h4 data-i18n="unitEcon.level2Title">Contribution Profit</h4>
+        <p data-i18n="unitEcon.level2Text">Gross profit minus the variable costs of actually selling and fulfilling the order: marketplace fees, packing, delivery, advertising.</p>
+        <div class="profit-level__formula" data-i18n="unitEcon.level2Formula">Gross Profit − Variable Costs</div>
+      </div>
+      <div class="profit-level profit-level--3">
+        <h4 data-i18n="unitEcon.level3Title">Operating Profit</h4>
+        <p data-i18n="unitEcon.level3Text">Contribution profit minus monthly fixed operating expenses. What's actually left for the business.</p>
+        <div class="profit-level__formula" data-i18n="unitEcon.level3Formula">Contribution − Fixed Costs</div>
+      </div>
+    </div>
+
+    <h3 style="font-size:17px;margin-bottom:10px;"><span data-i18n="unitEcon.exampleH3">Illustrative B2C Example</span> <span class="tag tag--assumption" data-i18n="unitEcon.exampleTag">Hypothetical scenario</span></h3>
+    <p class="prose" style="margin-bottom:10px;" data-i18n="unitEcon.exampleLede">All figures are Rp per 7-liter bag. The Rp 33,000 landed cost is an assumption, not an actual distributor quotation — likewise the marketplace fee, shipping, and marketing figures. 45% is <em>not</em> an established Indonesian cat-litter industry gross margin.</p>
+    <div class="table-scroll">
+      <table class="data-table">
+        <thead><tr><th data-i18n="unitEcon.thLineItem">Line item</th><th data-i18n="unitEcon.thAmount">Amount (Rp)</th></tr></thead>
+        <tbody>
+          <tr><td data-i18n="unitEcon.rowSellingPrice">Retail selling price</td><td data-i18n="unitEcon.v60000">60,000</td></tr>
+          <tr><td data-i18n="unitEcon.rowLandedCost">Landed product cost</td><td data-i18n="unitEcon.v33000">33,000</td></tr>
+          <tr><td><strong data-i18n="unitEcon.rowGrossProfit">Gross profit</strong></td><td><strong data-i18n="unitEcon.v27000">27,000</strong></td></tr>
+          <tr><td data-i18n="unitEcon.rowGrossMargin">Gross margin</td><td data-i18n="unitEcon.v45pct">45.0%</td></tr>
+          <tr><td data-i18n="unitEcon.rowMarketplaceFee">Marketplace / payment fees</td><td data-i18n="unitEcon.v6000">6,000</td></tr>
+          <tr><td data-i18n="unitEcon.rowPacking">Packing + seller-funded delivery</td><td data-i18n="unitEcon.v4000">4,000</td></tr>
+          <tr><td data-i18n="unitEcon.rowAdvertising">Advertising &amp; promo allocation</td><td data-i18n="unitEcon.v5000">5,000</td></tr>
+          <tr><td><strong data-i18n="unitEcon.rowContribution">Contribution profit</strong></td><td><strong data-i18n="unitEcon.v12000">12,000</strong></td></tr>
+          <tr><td data-i18n="unitEcon.rowContributionMargin">Contribution margin</td><td data-i18n="unitEcon.v20pct">20.0%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout callout--muted">
+      <p><strong data-i18n="unitEcon.insightLabel">Key insight:</strong> <span data-i18n="unitEcon.insightText">a product with a 45% gross margin might retain only a 20% contribution margin after marketplace-related expenses. This is why costs beyond the manufacturer's selling price must be evaluated before calling anything "profitable."</span></p>
+    </div>
+
+    <h3 style="font-size:17px;margin:32px 0 6px;" data-i18n="unitEcon.calcH3">Try it yourself — Unit Economics Calculator</h3>
+    <p class="prose" style="margin-bottom:6px;" data-i18n="unitEcon.calcLede">Adjust the sliders to test different pricing and cost assumptions. Nothing here is a verified market figure.</p>
+    <div class="calc-panel">
+      <div class="calc-inputs">
+        <h4><svg width="14" height="14"><use href="#i-sliders"/></svg> <span data-i18n="unitEcon.inputsHeading">Inputs</span></h4>
+
+        <div class="field">
+          <div class="field__top"><span class="field__label"><span data-i18n="unitEcon.fieldPrice">Retail selling price</span> <span class="tag tag--target" data-i18n="badge.target">Target</span></span><span class="field__value" id="ue-price-val">Rp 60,000</span></div>
+          <input type="range" id="ue-price" min="35000" max="100000" step="1000" value="60000">
+        </div>
+        <div class="field">
+          <div class="field__top"><span class="field__label"><span data-i18n="unitEcon.fieldLanded">Landed product cost</span> <span class="tag tag--assumption" data-i18n="badge.assumption">Assumption</span></span><span class="field__value" id="ue-landed-val">Rp 33,000</span></div>
+          <input type="range" id="ue-landed" min="15000" max="70000" step="1000" value="33000">
+        </div>
+        <div class="field">
+          <div class="field__top"><span class="field__label"><span data-i18n="unitEcon.fieldFee">Marketplace / payment fee</span> <span class="tag tag--assumption" data-i18n="badge.assumption">Assumption</span></span><span class="field__value" id="ue-fee-val">10.0%</span></div>
+          <input type="range" id="ue-fee" min="0" max="20" step="0.5" value="10">
+        </div>
+        <div class="field">
+          <div class="field__top"><span class="field__label"><span data-i18n="unitEcon.fieldFulfill">Packing &amp; fulfillment</span> <span class="tag tag--assumption" data-i18n="badge.assumption">Assumption</span></span><span class="field__value" id="ue-fulfill-val">Rp 4,000</span></div>
+          <input type="range" id="ue-fulfill" min="0" max="15000" step="500" value="4000">
+        </div>
+        <div class="field">
+          <div class="field__top"><span class="field__label"><span data-i18n="unitEcon.fieldAds">Advertising cost</span> <span class="tag tag--assumption" data-i18n="badge.assumption">Assumption</span></span><span class="field__value" id="ue-ads-val">Rp 5,000</span></div>
+          <input type="range" id="ue-ads" min="0" max="20000" step="500" value="5000">
+        </div>
+        <div class="field">
+          <div class="field__top"><span class="field__label"><span data-i18n="unitEcon.fieldPromo">Rewards / promo cost</span> <span class="tag tag--assumption" data-i18n="badge.assumption">Assumption</span></span><span class="field__value" id="ue-promo-val">Rp 0</span></div>
+          <input type="range" id="ue-promo" min="0" max="10000" step="500" value="0">
+        </div>
+      </div>
+
+      <div class="calc-outputs">
+        <h4><svg width="14" height="14"><use href="#i-bar-chart"/></svg> <span data-i18n="unitEcon.outputsHeading">Calculated results</span></h4>
+        <div class="output-rows">
+          <div class="output-row"><span class="output-row__label" data-i18n="unitEcon.outGrossProfit">Gross profit / bag</span><span class="output-row__value" id="ue-gross-profit">Rp 27,000</span></div>
+          <div class="output-row"><span class="output-row__label" data-i18n="unitEcon.outGrossMargin">Gross margin</span><span class="output-row__value" id="ue-gross-margin">45.0%</span></div>
+          <div class="output-row output-row--highlight"><span class="output-row__label" data-i18n="unitEcon.outContribution">Contribution profit / bag</span><span class="output-row__value" id="ue-contribution">Rp 12,000</span></div>
+          <div class="output-row output-row--highlight"><span class="output-row__label" data-i18n="unitEcon.outContributionMargin">Contribution margin</span><span class="output-row__value" id="ue-contribution-margin">20.0%</span></div>
+        </div>
+        <div class="warning-banner" id="ue-warning" style="display:none;">
+          <svg width="16" height="16"><use href="#i-alert-triangle"/></svg>
+          <span data-i18n="unitEcon.warning">At these settings, contribution profit is zero or negative — every unit sold loses money before fixed costs are even considered.</span>
+        </div>
+        <button class="scenario-btn mt-24" id="ue-send-to-sim" style="width:100%;" data-i18n="unitEcon.sendToSim">Use these numbers in the profitability simulator ↓</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 06 Simulator ============ -->
+<section class="page-section page-section--alt" id="simulator">
+  <div class="container">
+    <div class="section-kicker"><svg width="14" height="14"><use href="#i-trending-up"/></svg> <span data-i18n="simulator.kicker">06 · Profitability Simulator</span></div>
+    <div class="section-head">
+      <h2 data-i18n="simulator.h2">Profit Potential at Different Sales Volumes</h2>
+      <p data-i18n="simulator.lede">Assuming a Rp 60,000 selling price and Rp 12,000 contribution profit per bag — illustrative, not a forecast. Operating expenses still need to be deducted from contribution profit.</p>
+    </div>
+
+    <div class="table-scroll">
+      <table class="data-table">
+        <thead><tr><th data-i18n="simulator.thBags">Bags sold / month</th><th data-i18n="simulator.thRevenue">Revenue (Rp)</th><th data-i18n="simulator.thContribution">Contribution profit (Rp)</th></tr></thead>
+        <tbody id="volumeTableBody"></tbody>
+      </table>
+    </div>
+
+    <div class="callout callout--muted">
+      <p><strong data-i18n="simulator.breakEvenLabel">Break-even illustration:</strong> <span data-i18n="simulator.breakEvenText">assuming Rp 25,000,000 in monthly fixed operating expenses and Rp 12,000 contribution profit per bag — <strong>break-even volume = 25,000,000 ÷ 12,000 ≈ 2,084 bags/month.</strong> The business would need to reach this volume, under these assumptions, to cover its fixed costs.</span></p>
+    </div>
+
+    <h3 style="font-size:17px;margin:36px 0 6px;" data-i18n="simulator.calcH3">Monthly Profit &amp; Break-Even Simulator</h3>
+    <p class="prose" style="margin-bottom:6px;" data-i18n="simulator.calcLede">Pick a scenario preset, or set every input yourself. Results update live.</p>
+
+    <div class="scenario-buttons" id="scenarioButtons">
+      <button class="scenario-btn" data-scenario="conservative" data-i18n="simulator.btnConservative">Conservative</button>
+      <button class="scenario-btn is-active" data-scenario="base" data-i18n="simulator.btnBase">Base case</button>
+      <button class="scenario-btn" data-scenario="optimistic" data-i18n="simulator.btnOptimistic">Optimistic</button>
+    </div>
+
+    <div class="calc-panel">
+      <div class="calc-inputs">
+        <h4><svg width="14" height="14"><use href="#i-sliders"/></svg> <span data-i18n="simulator.inputsHeading">Inputs</span></h4>
+        <div class="field">
+          <div class="field__top"><span class="field__label"><span data-i18n="simulator.fieldUnits">Bags sold per month</span> <span class="tag tag--target" data-i18n="badge.target">Target</span></span><span class="field__value" id="sim-units-val">3,000</span></div>
+          <input type="range" id="sim-units" min="0" max="10000" step="100" value="3000">
+        </div>
+        <div class="field">
+          <div class="field__top"><span class="field__label"><span data-i18n="simulator.fieldPrice">Selling price per bag</span> <span class="tag tag--target" data-i18n="badge.target">Target</span></span><span class="field__value" id="sim-price-val">Rp 60,000</span></div>
+          <input type="range" id="sim-price" min="35000" max="100000" step="1000" value="60000">
+        </div>
+        <div class="field">
+          <div class="field__top"><span class="field__label"><span data-i18n="simulator.fieldLanded">Landed product cost</span> <span class="tag tag--assumption" data-i18n="badge.assumption">Assumption</span></span><span class="field__value" id="sim-landed-val">Rp 33,000</span></div>
+          <input type="range" id="sim-landed" min="15000" max="70000" step="1000" value="33000">
+        </div>
+        <div class="field">
+          <div class="field__top"><span class="field__label"><span data-i18n="simulator.fieldOther">Other variable cost / bag</span> <span class="tag tag--assumption" data-i18n="badge.assumption">Assumption</span></span><span class="field__value" id="sim-other-val">Rp 15,000</span></div>
+          <input type="range" id="sim-other" min="0" max="40000" step="500" value="15000">
+          <p style="font-size:12px;color:var(--ink-muted);margin-top:6px;" data-i18n="simulator.fieldOtherNote">Lumps marketplace fees, fulfillment, and advertising — matches the scenario table below.</p>
+        </div>
+        <div class="field">
+          <div class="field__top"><span class="field__label"><span data-i18n="simulator.fieldFixed">Monthly fixed operating costs</span> <span class="tag tag--assumption" data-i18n="badge.assumption">Assumption</span></span><span class="field__value" id="sim-fixed-val">Rp 25,000,000</span></div>
+          <input type="range" id="sim-fixed" min="0" max="60000000" step="1000000" value="25000000">
+        </div>
+      </div>
+
+      <div class="calc-outputs">
+        <h4><svg width="14" height="14"><use href="#i-bar-chart"/></svg> <span data-i18n="simulator.outputsHeading">Calculated results</span></h4>
+        <div class="output-rows">
+          <div class="output-row"><span class="output-row__label" data-i18n="simulator.outRevenue">Monthly revenue</span><span class="output-row__value" id="sim-revenue">Rp 180,000,000</span></div>
+          <div class="output-row"><span class="output-row__label" data-i18n="simulator.outGrossProfit">Monthly gross profit</span><span class="output-row__value" id="sim-gross-profit">Rp 81,000,000</span></div>
+          <div class="output-row output-row--highlight"><span class="output-row__label" data-i18n="simulator.outContribution">Monthly contribution profit</span><span class="output-row__value" id="sim-contribution">Rp 36,000,000</span></div>
+          <div class="output-row output-row--result"><span class="output-row__label" data-i18n="simulator.outOperating">Monthly operating result</span><span class="output-row__value" id="sim-operating">Rp 11,000,000</span></div>
+          <div class="output-row"><span class="output-row__label" data-i18n="simulator.outBreakeven">Break-even volume</span><span class="output-row__value" id="sim-breakeven">2,084 bags/mo</span></div>
+        </div>
+        <div class="warning-banner" id="sim-warning" style="display:none;">
+          <svg width="16" height="16"><use href="#i-alert-triangle"/></svg>
+          <span data-i18n="simulator.warning">Contribution per bag is zero or negative — break-even is not achievable by scaling volume alone under these assumptions.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="chart-card">
+      <h4 data-i18n="simulator.waterfallTitle">Per-Bag Price vs. Cost Waterfall — Current Inputs</h4>
+      <p class="chart-card__caption"><span data-i18n="simulator.waterfallCaption">Walks from monthly revenue down to the monthly operating result, at the slider settings above.</span> <span class="tag tag--calculated" data-i18n="badge.calculated">Calculated</span></p>
+      <div id="chart-monthly-waterfall"></div>
+    </div>
+
+    <h3 style="font-size:17px;margin:40px 0 6px;" data-i18n="simulator.scenarioH3">Conservative, Base, and Optimistic Scenarios</h3>
+    <p class="prose" style="margin-bottom:6px;" data-i18n="simulator.scenarioLede">All figures below are hypothetical sensitivity cases, not probabilistic forecasts. Selecting a scenario above loads these exact figures into the simulator.</p>
+
+    <div class="scenario-grid">
+      <div class="scenario-card">
+        <div class="scenario-card__title" data-i18n="scenario.conservative">Conservative</div>
+        <div class="scenario-card__row"><span data-i18n="simulator.cardBags">Bags / month</span><span data-i18n="simulator.conservativeBags">1,000</span></div>
+        <div class="scenario-card__row"><span data-i18n="simulator.cardLanded">Landed cost</span><span data-i18n="simulator.conservativeLanded">Rp 38,000</span></div>
+        <div class="scenario-card__row"><span data-i18n="simulator.cardOther">Other variable cost</span><span data-i18n="simulator.conservativeOther">Rp 14,000</span></div>
+        <div class="scenario-card__row"><span data-i18n="simulator.cardContribution">Contribution / bag</span><span data-i18n="simulator.conservativeContribution">Rp 8,000</span></div>
+        <div class="scenario-card__row"><span data-i18n="simulator.cardRevenue">Monthly revenue</span><span data-i18n="simulator.conservativeRevenue">Rp 60M</span></div>
+        <div class="scenario-card__result is-negative"><span data-i18n="simulator.conservativeResult">−Rp 17M</span><span data-i18n="simulator.perMonth"> / month</span></div>
+      </div>
+      <div class="scenario-card">
+        <div class="scenario-card__title" data-i18n="scenario.base">Base</div>
+        <div class="scenario-card__row"><span data-i18n="simulator.cardBags">Bags / month</span><span data-i18n="simulator.baseBags">3,000</span></div>
+        <div class="scenario-card__row"><span data-i18n="simulator.cardLanded">Landed cost</span><span data-i18n="simulator.baseLanded">Rp 33,000</span></div>
+        <div class="scenario-card__row"><span data-i18n="simulator.cardOther">Other variable cost</span><span data-i18n="simulator.baseOther">Rp 15,000</span></div>
+        <div class="scenario-card__row"><span data-i18n="simulator.cardContribution">Contribution / bag</span><span data-i18n="simulator.baseContribution">Rp 12,000</span></div>
+        <div class="scenario-card__row"><span data-i18n="simulator.cardRevenue">Monthly revenue</span><span data-i18n="simulator.baseRevenue">Rp 180M</span></div>
+        <div class="scenario-card__result is-positive"><span data-i18n="simulator.baseResult">+Rp 11M</span><span data-i18n="simulator.perMonth"> / month</span></div>
+      </div>
+      <div class="scenario-card">
+        <div class="scenario-card__title" data-i18n="scenario.optimistic">Optimistic</div>
+        <div class="scenario-card__row"><span data-i18n="simulator.cardBags">Bags / month</span><span data-i18n="simulator.optimisticBags">5,000</span></div>
+        <div class="scenario-card__row"><span data-i18n="simulator.cardLanded">Landed cost</span><span data-i18n="simulator.optimisticLanded">Rp 30,000</span></div>
+        <div class="scenario-card__row"><span data-i18n="simulator.cardOther">Other variable cost</span><span data-i18n="simulator.optimisticOther">Rp 14,000</span></div>
+        <div class="scenario-card__row"><span data-i18n="simulator.cardContribution">Contribution / bag</span><span data-i18n="simulator.optimisticContribution">Rp 16,000</span></div>
+        <div class="scenario-card__row"><span data-i18n="simulator.cardRevenue">Monthly revenue</span><span data-i18n="simulator.optimisticRevenue">Rp 300M</span></div>
+        <div class="scenario-card__result is-positive"><span data-i18n="simulator.optimisticResult">+Rp 55M</span><span data-i18n="simulator.perMonth"> / month</span></div>
+      </div>
+    </div>
+
+    <div class="chart-card">
+      <h4 data-i18n="simulator.scenarioBarTitle">Monthly Operating Result by Scenario</h4>
+      <p class="chart-card__caption"><span data-i18n="simulator.scenarioBarCaption">Fixed costs held at Rp 25M/month across all three. The conservative case loses money.</span> <span class="tag tag--assumption" data-i18n="badge.hypotheticalSensitivity">Hypothetical sensitivity cases</span></p>
+      <div id="chart-scenario-bar"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 07 Startup Capital ============ -->
+<section class="page-section" id="startup-capital">
+  <div class="container">
+    <div class="section-kicker"><svg width="14" height="14"><use href="#i-wallet"/></svg> <span data-i18n="startup.kicker">07 · Startup Capital</span></div>
+    <div class="section-head">
+      <h2 data-i18n="startup.h2">How Much Capital Does This Actually Take to Start?</h2>
+      <p data-i18n="startup.lede">Everything above describes the recurring, monthly economics. Before any of that can be tested, the business needs upfront capital — mostly to buy the first batch of inventory and survive the early months before volume covers fixed costs. <strong>Every figure below is a planning assumption, not a vendor quote, government fee schedule, or confirmed cost</strong> — sized to be directionally reasonable for a small-scale marketplace launch, so a partner can see the shape of the capital requirement before anyone gets real quotes.</p>
+    </div>
+
+    <div class="table-scroll">
+      <table class="data-table">
+        <caption><span data-i18n="startup.tableCaption">Illustrative estimate at the defaults used throughout this page.</span> <span class="tag tag--assumption" data-i18n="badge.allAssumptions">All lines are assumptions</span></caption>
+        <thead><tr><th data-i18n="startup.thLineItem">Line item</th><th data-i18n="startup.thAmount">Amount (Rp)</th><th data-i18n="startup.thBasis">Basis</th></tr></thead>
+        <tbody>
+          <tr><td data-i18n="startup.rowInventory">Initial inventory order (1,000 bags × Rp 33,000 landed cost)</td><td data-i18n="startup.v33m">33,000,000</td><td><span class="tag tag--assumption" data-i18n="badge.assumption">Assumption</span></td></tr>
+          <tr><td data-i18n="startup.rowStore">Store &amp; brand setup (photography, listings, basic branding)</td><td data-i18n="startup.v5m">5,000,000</td><td><span class="tag tag--assumption" data-i18n="badge.assumption">Assumption</span></td></tr>
+          <tr><td data-i18n="startup.rowLegal">Legal &amp; licensing setup (company &amp; import paperwork)</td><td data-i18n="startup.v10m">10,000,000</td><td><span class="tag tag--assumption" data-i18n="badge.assumption">Assumption</span></td></tr>
+          <tr><td data-i18n="startup.rowMarketing">Launch marketing budget</td><td data-i18n="startup.v10m">10,000,000</td><td><span class="tag tag--assumption" data-i18n="badge.assumption">Assumption</span></td></tr>
+          <tr><td data-i18n="startup.rowRunway">Cash runway buffer (3 months at the Conservative scenario's monthly loss)</td><td data-i18n="startup.v51m">51,000,000</td><td><span class="tag tag--calculated" data-i18n="badge.calculated">Calculated</span></td></tr>
+          <tr><td><strong data-i18n="startup.rowTotal">Total estimated startup capital</strong></td><td><strong data-i18n="startup.v109m">109,000,000</strong></td><td><span class="tag tag--calculated" data-i18n="badge.calculated">Calculated</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout callout--unverified">
+      <p><svg width="14" height="14" style="vertical-align:-2px"><use href="#i-info"/></svg> <span data-i18n="startup.disclaimerText">None of this has been confirmed with an actual distributor, marketplace, photographer, or Indonesian legal counsel. Treat it as a planning placeholder to size the conversation, not a budget to commit against.</span></p>
+    </div>
+
+    <h3 style="font-size:17px;margin:32px 0 6px;" data-i18n="startup.calcH3">Try it yourself — Startup Capital Calculator</h3>
+    <p class="prose" style="margin-bottom:6px;" data-i18n="startup.calcLede">The cash-runway buffer is tied to the Conservative scenario's monthly result from the simulator above, so it moves if that scenario's assumptions move.</p>
+    <div class="calc-panel">
+      <div class="calc-inputs">
+        <h4><svg width="14" height="14"><use href="#i-sliders"/></svg> <span data-i18n="startup.inputsHeading">Inputs</span></h4>
+
+        <div class="field">
+          <div class="field__top"><span class="field__label"><span data-i18n="startup.fieldBags">Initial inventory order (bags)</span> <span class="tag tag--target" data-i18n="badge.target">Target</span></span><span class="field__value" id="sc-bags-val">1,000</span></div>
+          <input type="range" id="sc-bags" min="200" max="5000" step="100" value="1000">
+        </div>
+        <div class="field">
+          <div class="field__top"><span class="field__label"><span data-i18n="startup.fieldLanded">Landed product cost</span> <span class="tag tag--assumption" data-i18n="badge.assumption">Assumption</span></span><span class="field__value" id="sc-landed-val">Rp 33,000</span></div>
+          <input type="range" id="sc-landed" min="15000" max="70000" step="1000" value="33000">
+        </div>
+        <div class="field">
+          <div class="field__top"><span class="field__label"><span data-i18n="startup.fieldStore">Store &amp; brand setup</span> <span class="tag tag--assumption" data-i18n="badge.assumption">Assumption</span></span><span class="field__value" id="sc-store-val">Rp 5,000,000</span></div>
+          <input type="range" id="sc-store" min="0" max="20000000" step="500000" value="5000000">
+        </div>
+        <div class="field">
+          <div class="field__top"><span class="field__label"><span data-i18n="startup.fieldLegal">Legal &amp; licensing setup</span> <span class="tag tag--assumption" data-i18n="badge.assumption">Assumption</span></span><span class="field__value" id="sc-legal-val">Rp 10,000,000</span></div>
+          <input type="range" id="sc-legal" min="0" max="50000000" step="1000000" value="10000000">
+        </div>
+        <div class="field">
+          <div class="field__top"><span class="field__label"><span data-i18n="startup.fieldMarketing">Launch marketing budget</span> <span class="tag tag--assumption" data-i18n="badge.assumption">Assumption</span></span><span class="field__value" id="sc-marketing-val">Rp 10,000,000</span></div>
+          <input type="range" id="sc-marketing" min="0" max="50000000" step="1000000" value="10000000">
+        </div>
+        <div class="field">
+          <div class="field__top"><span class="field__label"><span data-i18n="startup.fieldRunway">Cash runway buffer (months)</span> <span class="tag tag--target" data-i18n="badge.target">Target</span></span><span class="field__value" id="sc-runway-val">3 months</span></div>
+          <input type="range" id="sc-runway" min="0" max="6" step="1" value="3">
+          <p style="font-size:12px;color:var(--ink-muted);margin-top:6px;" id="sc-runway-note">= 3 × Rp 17,000,000 Conservative-case monthly loss</p>
+        </div>
+      </div>
+
+      <div class="calc-outputs">
+        <h4><svg width="14" height="14"><use href="#i-bar-chart"/></svg> <span data-i18n="startup.outputsHeading">Calculated results</span></h4>
+        <div class="output-rows">
+          <div class="output-row"><span class="output-row__label" data-i18n="startup.outInventoryCost">Initial inventory cost</span><span class="output-row__value" id="sc-inventory-cost">Rp 33,000,000</span></div>
+          <div class="output-row"><span class="output-row__label" data-i18n="startup.outOnetimeCost">One-time setup &amp; launch costs</span><span class="output-row__value" id="sc-onetime-cost">Rp 25,000,000</span></div>
+          <div class="output-row"><span class="output-row__label" data-i18n="startup.outRunwayCost">Cash runway buffer</span><span class="output-row__value" id="sc-runway-cost">Rp 51,000,000</span></div>
+          <div class="output-row output-row--highlight"><span class="output-row__label" data-i18n="startup.outTotal">Total estimated startup capital</span><span class="output-row__value" id="sc-total">Rp 109,000,000</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 08 Growth ============ -->
+<section class="page-section" id="growth">
+  <div class="container">
+    <div class="section-kicker"><svg width="14" height="14"><use href="#i-map"/></svg> <span data-i18n="growth.kicker">08 · Competitive Strategy &amp; Growth</span></div>
+    <div class="section-head">
+      <h2 data-i18n="growth.h2">Start Small, Validate the Market, Then Grow</h2>
+      <p data-i18n="growth.lede">Our initial strategy is to launch a B2C store carrying two or three carefully selected cat-litter brands, focused on middle-income customers who value reliable quality and reasonable prices. We do not need to compete solely on being the cheapest seller.</p>
+    </div>
+
+    <div class="strategy-grid">
+      <div class="strategy-card"><span class="icon-badge"><svg width="18" height="18"><use href="#i-target"/></svg></span><h4 data-i18n="growth.strategy1Title">Product Selection</h4><p data-i18n="growth.strategy1Text">Carefully evaluated products rather than an unnecessarily large catalogue.</p></div>
+      <div class="strategy-card"><span class="icon-badge"><svg width="18" height="18"><use href="#i-store"/></svg></span><h4 data-i18n="growth.strategy2Title">Fair Pricing</h4><p data-i18n="growth.strategy2Text">Competitive prices while protecting sustainable margins.</p></div>
+      <div class="strategy-card"><span class="icon-badge"><svg width="18" height="18"><use href="#i-users"/></svg></span><h4 data-i18n="growth.strategy3Title">Customer Experience</h4><p data-i18n="growth.strategy3Text">Clear product information, dependable service, consistent delivery.</p></div>
+      <div class="strategy-card"><span class="icon-badge"><svg width="18" height="18"><use href="#i-repeat"/></svg></span><h4 data-i18n="growth.strategy4Title">Repeat Purchases</h4><p data-i18n="growth.strategy4Text">Encourage returning customers through good service and satisfaction.</p></div>
+      <div class="strategy-card"><span class="icon-badge"><svg width="18" height="18"><use href="#i-layers"/></svg></span><h4 data-i18n="growth.strategy5Title">Brand Relationships</h4><p data-i18n="growth.strategy5Text">As demand grows, negotiate improved supplier &amp; distribution terms.</p></div>
+    </div>
+
+    <h3 style="font-size:17px;margin:40px 0 20px;" data-i18n="growth.roadmapH3">From Pet-Care Retailer to Distributor</h3>
+    <div class="roadmap">
+      <div class="roadmap-step">
+        <div class="roadmap-step__rail"><div class="roadmap-step__dot">1</div><div class="roadmap-step__line"></div></div>
+        <div class="roadmap-step__body">
+          <span class="roadmap-step__tag" data-i18n="growth.stage1Tag">B2C Market Validation</span>
+          <h4 data-i18n="growth.stage1Title">Sell two or three selected brands through Indonesian marketplaces</h4>
+          <p data-i18n="growth.stage1Text">Measure revenue, product margins, customer acquisition cost, repeat-purchase rate, and inventory turnover.</p>
+        </div>
+      </div>
+      <div class="roadmap-step">
+        <div class="roadmap-step__rail"><div class="roadmap-step__dot">2</div><div class="roadmap-step__line"></div></div>
+        <div class="roadmap-step__body">
+          <span class="roadmap-step__tag" data-i18n="growth.stage2Tag">Reliable Customer Base</span>
+          <h4 data-i18n="growth.stage2Title">Grow sales volume, improve supplier terms, build store branding</h4>
+        </div>
+      </div>
+      <div class="roadmap-step">
+        <div class="roadmap-step__rail"><div class="roadmap-step__dot">3</div><div class="roadmap-step__line"></div></div>
+        <div class="roadmap-step__body">
+          <span class="roadmap-step__tag" data-i18n="growth.stage3Tag">OEM &amp; Private Label</span>
+          <h4 data-i18n="growth.stage3Title">Once we know what local customers actually want, go to OEM and launch our own product</h4>
+          <p data-i18n="growth.stage3Text">Use real sales data from Stages 1–2 — which sizes, scents, and price points actually sell — to brief an OEM manufacturer and launch a private-label product. This is where the bigger margin is: we stop paying a third-party brand's markup and keep it ourselves, while selling an assortment we've already proven customers want. Requires its own assumptions (OEM minimum order quantities, tooling and packaging costs, quality control) not yet estimated — see <a href="#startup-capital">Startup Capital</a> for the launch-cost pattern this would follow.</p>
+        </div>
+      </div>
+      <div class="roadmap-step">
+        <div class="roadmap-step__rail"><div class="roadmap-step__dot">4</div><div class="roadmap-step__line"></div></div>
+        <div class="roadmap-step__body">
+          <span class="roadmap-step__tag" data-i18n="growth.stage4Tag">Expand into B2B</span>
+          <h4 data-i18n="growth.stage4Title">Supply selected retailers and pet shops; explore authorized distributor relationships</h4>
+          <p data-i18n="growth.stage4Text">Only once sufficient demand and unit economics are demonstrated — our own OEM product strengthens this pitch too.</p>
+        </div>
+      </div>
+      <div class="roadmap-step">
+        <div class="roadmap-step__rail"><div class="roadmap-step__dot">5</div><div class="roadmap-step__line"></div></div>
+        <div class="roadmap-step__body">
+          <span class="roadmap-step__tag" data-i18n="growth.stage5Tag">Broader Pet-Care Expansion</span>
+          <h4 data-i18n="growth.stage5Title">Introduce hygiene supplies, treats, accessories, grooming consumables</h4>
+        </div>
+      </div>
+      <div class="roadmap-step">
+        <div class="roadmap-step__rail"><div class="roadmap-step__dot">6</div></div>
+        <div class="roadmap-step__body">
+          <span class="roadmap-step__tag" data-i18n="growth.stage6Tag">Digital Loyalty Ecosystem</span>
+          <h4 data-i18n="growth.stage6Title">A future membership platform — pet profiles, rewards, reminders</h4>
+          <p data-i18n="growth.stage6Text">A future opportunity, not a commitment to immediate development.</p>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="font-size:17px;margin:40px 0 6px;" data-i18n="growth.timelineH3">Timeline &amp; Decision Checkpoints</h3>
+    <p class="prose" style="margin-bottom:6px;" data-i18n="growth.timelineLede">The stages above don't have dates attached — but "test with limited capital" is just a slogan without a timeline. Below is an illustrative pacing <span class="tag tag--target">Target</span>, anchored to the 3-month cash-runway buffer already built into <a href="#startup-capital">Startup Capital</a> and the scenario figures from the <a href="#simulator">Simulator</a>, not a committed project plan.</p>
+
+    <div class="table-scroll">
+      <table class="data-table">
+        <thead><tr><th data-i18n="growth.thMonth">Month</th><th data-i18n="growth.thWhatHappens">What happens</th><th data-i18n="growth.thDecisionPoint">Decision point</th></tr></thead>
+        <tbody>
+          <tr><td>0</td><td data-i18n="growth.t0">Finalize 2–3 brands, place initial inventory order, go live on Shopee</td><td>—</td></tr>
+          <tr><td>1–3</td><td data-i18n="growth.t13">Track weekly sales, repeat-purchase rate, contribution margin, and CAC — the window the Rp 51,000,000 runway buffer is sized to cover</td><td>—</td></tr>
+          <tr><td><strong>3</strong></td><td><strong data-i18n="growth.checkpoint1">Checkpoint 1</strong></td><td data-i18n="growth.checkpoint1Decision">Compare actual contribution margin &amp; volume to the Conservative scenario (1,000 bags/mo). At or above → continue. Below and worsening → pause before reordering.</td></tr>
+          <tr><td>4–6</td><td data-i18n="growth.t46">Reorder inventory, improve supplier terms, begin OEM feasibility research (Growth, Stage 3)</td><td>—</td></tr>
+          <tr><td><strong>6</strong></td><td><strong data-i18n="growth.checkpoint2">Checkpoint 2</strong></td><td data-i18n="growth.checkpoint2Decision">Compare to the Base case (3,000 bags/mo, ≈2,084 bags/mo break-even). Near or at break-even → begin B2B outreach (Stage 4) and OEM supplier conversations.</td></tr>
+          <tr><td>12+</td><td data-i18n="growth.t12plus">If self-sustaining: broader pet-care SKUs (Stage 5), evaluate the loyalty app (Stage 6)</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 09 Risks + Conclusion ============ -->
+<section class="page-section page-section--alt" id="risks">
+  <div class="container">
+    <div class="section-kicker"><svg width="14" height="14"><use href="#i-shield-alert"/></svg> <span data-i18n="risks.kicker">09 · Key Commercial Risks</span></div>
+    <div class="section-head">
+      <h2 data-i18n="risks.h2">A Credible Proposal Identifies Risk Alongside Opportunity</h2>
+    </div>
+
+    <div class="risk-grid">
+      <div class="risk-card"><div class="risk-card__title"><svg width="18" height="18"><use href="#i-alert-triangle"/></svg> <span data-i18n="risks.risk1Title">Competitive Pricing Pressure</span></div><p data-i18n="risks.risk1Text">Established sellers may already have strong supplier terms, customer reviews, and marketplace rankings.</p></div>
+      <div class="risk-card"><div class="risk-card__title"><svg width="18" height="18"><use href="#i-alert-triangle"/></svg> <span data-i18n="risks.risk2Title">Thin Contribution Margins</span></div><p data-i18n="risks.risk2Text">Marketplace fees, shipping, advertising, and promotions may consume a substantial share of gross profit.</p></div>
+      <div class="risk-card"><div class="risk-card__title"><svg width="18" height="18"><use href="#i-alert-triangle"/></svg> <span data-i18n="risks.risk3Title">Bulky Inventory</span></div><p data-i18n="risks.risk3Text">Cat litter creates storage and delivery costs that may reduce profitability.</p></div>
+      <div class="risk-card"><div class="risk-card__title"><svg width="18" height="18"><use href="#i-alert-triangle"/></svg> <span data-i18n="risks.risk4Title">Supplier Dependency</span></div><p data-i18n="risks.risk4Text">Imported brands may have exclusive distributors or minimum purchase requirements.</p></div>
+      <div class="risk-card"><div class="risk-card__title"><svg width="18" height="18"><use href="#i-alert-triangle"/></svg> <span data-i18n="risks.risk5Title">Customer Acquisition Cost</span></div><p data-i18n="risks.risk5Text">Paid advertising may make a first purchase unprofitable unless repeat customers add enough contribution.</p></div>
+      <div class="risk-card"><div class="risk-card__title"><svg width="18" height="18"><use href="#i-alert-triangle"/></svg> <span data-i18n="risks.risk6Title">Working Capital</span></div><p data-i18n="risks.risk6Text">Inventory purchases require cash before all goods are sold; unsold stock ties up capital.</p></div>
+      <div class="risk-card"><div class="risk-card__title"><svg width="18" height="18"><use href="#i-alert-triangle"/></svg> <span data-i18n="risks.risk7Title">Import &amp; Compliance</span></div><p data-i18n="risks.risk7Text">Direct importing may require licensing, product classification review, customs procedures, and corporate arrangements.</p></div>
+    </div>
+
+    <h3 style="font-size:17px;margin:36px 0 6px;" data-i18n="risks.mitigationH3">Risk Mitigation</h3>
+    <ul class="mitigation-list">
+      <li><svg width="16" height="16"><use href="#i-check-circle"/></svg> <span data-i18n="risks.mitigation1">Start with a small product range.</span></li>
+      <li><svg width="16" height="16"><use href="#i-check-circle"/></svg> <span data-i18n="risks.mitigation2">Obtain real supplier quotations.</span></li>
+      <li><svg width="16" height="16"><use href="#i-check-circle"/></svg> <span data-i18n="risks.mitigation3">Compare local sourcing and direct imports.</span></li>
+      <li><svg width="16" height="16"><use href="#i-check-circle"/></svg> <span data-i18n="risks.mitigation4">Base warehousing in a lower-cost city such as Bandung rather than Jakarta, to keep labor and storage costs down as bulky inventory grows (see <a href="#why-litter">Why Cat Litter</a>) — not yet quoted.</span></li>
+      <li><svg width="16" height="16"><use href="#i-check-circle"/></svg> <span data-i18n="risks.mitigation5">Test marketing with limited budgets.</span></li>
+      <li><svg width="16" height="16"><use href="#i-check-circle"/></svg> <span data-i18n="risks.mitigation6">Track profitability per order.</span></li>
+      <li><svg width="16" height="16"><use href="#i-check-circle"/></svg> <span data-i18n="risks.mitigation7">Expand only after validating repeat demand and cash flow.</span></li>
+    </ul>
+
+    <h3 style="font-size:20px;margin:48px 0 18px;" data-i18n="risks.thesisH3">Why We Believe This Opportunity Deserves Further Investigation</h3>
+    <div class="thesis-grid">
+      <div class="thesis-card"><div class="thesis-card__num">01</div><h4 data-i18n="risks.thesis1Title">Established Market</h4><p data-i18n="risks.thesis1Text">Indonesia already has a substantial pet-care economy, forecast at Rp 10.438T in 2026.</p></div>
+      <div class="thesis-card"><div class="thesis-card__num">02</div><h4 data-i18n="risks.thesis2Title">Significant Cat-Related Spending</h4><p data-i18n="risks.thesis2Text">Cats represent a large share of Indonesia's pet food demand — an established base of cat-care consumers.</p></div>
+      <div class="thesis-card"><div class="thesis-card__num">03</div><h4 data-i18n="risks.thesis3Title">Attractive Product Characteristics</h4><p data-i18n="risks.thesis3Text">Cat litter is a repeat-purchase consumable, flagged by Euromonitor as a dynamic category.</p></div>
+      <div class="thesis-card"><div class="thesis-card__num">04</div><h4 data-i18n="risks.thesis4Title">Scalable Distribution Potential</h4><p data-i18n="risks.thesis4Text">A successful retail business builds customer data, credibility, and supplier relationships for later expansion.</p></div>
+    </div>
+
+    <div class="hypothesis-box">
+      <p><strong data-i18n="risks.hypothesisLabel">The central hypothesis:</strong> <span data-i18n="risks.hypothesisText">a carefully managed pet-care business can become profitable by sourcing suitable cat-litter brands, pricing them competitively, controlling marketplace costs, and retaining repeat customers.</span> <strong data-i18n="risks.hypothesisBold">However, the opportunity is not yet financially validated.</strong></p>
+      <p style="margin-bottom:6px;" data-i18n="risks.evidenceLede">The next evidence required:</p>
+      <ul class="validate-list">
+        <li><svg width="15" height="15"><use href="#i-target"/></svg> <span data-i18n="risks.evidence1">Actual supplier quotations</span></li>
+        <li><svg width="15" height="15"><use href="#i-target"/></svg> <span data-i18n="risks.evidence2">Product landed costs</span></li>
+        <li><svg width="15" height="15"><use href="#i-target"/></svg> <span data-i18n="risks.evidence3">Marketplace transaction economics</span></li>
+        <li><svg width="15" height="15"><use href="#i-target"/></svg> <span data-i18n="risks.evidence4">Realistic customer acquisition costs</span></li>
+        <li><svg width="15" height="15"><use href="#i-target"/></svg> <span data-i18n="risks.evidence5">Verified consumer demand</span></li>
+        <li><svg width="15" height="15"><use href="#i-target"/></svg> <span data-i18n="risks.evidence6">Repeat purchasing behavior</span></li>
+      </ul>
+      <p style="margin-top:16px;margin-bottom:0;"><strong data-i18n="risks.purposeText">The purpose of the initial business is to test these assumptions with limited capital before committing to significant expansion.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 10 FAQ ============ -->
+<section class="page-section" id="faq">
+  <div class="container">
+    <div class="section-kicker"><svg width="14" height="14"><use href="#i-help-circle"/></svg> <span data-i18n="faq.kicker">10 · Frequently Asked Questions</span></div>
+    <div class="section-head">
+      <h2 data-i18n="faq.h2">Honest Answers to the Hard Questions</h2>
+      <p data-i18n="faq.lede">Straight answers to the questions a prospective partner should ask before committing capital.</p>
+    </div>
+
+    <div class="faq-list">
+      <details class="faq-item" open>
+        <summary class="faq-item__q">
+          <span data-i18n="faq.q1">Isn't cat litter already a crowded market? Do we still have a real chance to enter it?</span>
+          <svg class="chevron" width="18" height="18"><use href="#i-chevron-down"/></svg>
+        </summary>
+        <div class="faq-item__a">
+          <p data-i18n="faq.q1a1">Honestly — nothing here is perfect, and nothing is certain. We're not claiming a new entrant is guaranteed to win in cat litter. It's a fair objection, and we take it seriously rather than explaining it away.</p>
+          <p data-i18n="faq.q1a2">What we do see is this: most cat litter sold in Indonesia today is, functionally, more or less the same product — and a large share of it, likely including the brands we'd carry, is manufactured in or sourced from China. That means the litter itself is unlikely to be our edge. Nobody is differentiating on the product alone.</p>
+          <p data-i18n="faq.q1a3">Where we believe we <em>can</em> differentiate is customer service and the overall buying experience — reliable fulfillment, clear information, and a relationship that continues after the first order, rather than competing purely on who has the lowest listing price this week. That is the thinking behind the longer-term plan to build our own app (see <a href="#growth">Growth, Stage 6</a>): pet profiles, replenishment reminders, and rewards that a bare marketplace storefront can't offer, giving repeat customers a reason to come back to us specifically.</p>
+          <p style="color:var(--ink-muted);font-size:13px;" data-i18n="faq.q1a4">This is a strategic position, not a market-validated claim — see <a href="#risks">Key Commercial Risks</a> for the competitive pressure it's weighed against.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-item__q">
+          <span data-i18n="faq.q2">Why not skip straight to OEM and launch our own product instead of reselling other brands first?</span>
+          <svg class="chevron" width="18" height="18"><use href="#i-chevron-down"/></svg>
+        </summary>
+        <div class="faq-item__a">
+          <p data-i18n="faq.q2a1">Because at the start we don't actually know Indonesian cat owners well enough to brief a manufacturer properly — which size, scent, clumping performance, bag design, and price point actually sell. Reselling two or three established brands first (Growth, Stages 1–2) is how we get that data cheaply: real purchase and repeat-purchase behavior, not guesses.</p>
+          <p data-i18n="faq.q2a2">OEM also carries its own upfront capital that the current <a href="#startup-capital">Startup Capital</a> estimate does not include — minimum order quantities are typically far larger than a marketplace reseller's initial stock, plus tooling, packaging design, and quality control. Jumping straight to OEM would mean committing that capital before we know it's the right product.</p>
+          <p style="color:var(--ink-muted);font-size:13px;" data-i18n="faq.q2a3">This is a sequencing choice, not a belief that reselling is the better long-term business — see <a href="#growth">Growth, Stage 3</a>.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 11 Sources ============ -->
+<section class="page-section" id="sources">
+  <div class="container">
+    <div class="section-kicker"><svg width="14" height="14"><use href="#i-info"/></svg> <span data-i18n="sources.kicker">11 · Sources &amp; Methodology</span></div>
+    <div class="section-head">
+      <h2 data-i18n="sources.h2">Research Sources</h2>
+      <p data-i18n="sources.lede">Every numerical market claim on this page traces back to one of the sources below, with its reporting year and whether it is historical or forecast. Click through to the original research or listing.</p>
+    </div>
+
+    <div id="sourcesList"></div>
+
+    <h3 style="font-size:18px;margin:40px 0 6px;" data-i18n="sources.integrityH3">Research Integrity Rules</h3>
+    <p class="prose" style="margin-bottom:6px;" data-i18n="sources.integrityLede">This website was built to follow these rules throughout:</p>
+    <ul class="integrity-list">
+      <li data-i18n="sources.rule1">Never describe the entire pet-care market as the cat-litter market.</li>
+      <li data-i18n="sources.rule2">Never describe pet food sales as cat-litter sales.</li>
+      <li data-i18n="sources.rule3">Never present hypothetical profit margins as verified industry averages.</li>
+      <li data-i18n="sources.rule4">Never invent manufacturer quotations or wholesale prices.</li>
+      <li data-i18n="sources.rule5">Clearly distinguish revenue, gross profit, contribution profit, and operating profit.</li>
+      <li data-i18n="sources.rule6">Clearly distinguish historical statistics from forecasts.</li>
+      <li data-i18n="sources.rule7">Never claim a marketplace listing price is a completed transaction price.</li>
+      <li data-i18n="sources.rule8">Never invent market-share estimates or purchase frequencies.</li>
+      <li data-i18n="sources.rule9">Show source citations and reporting years alongside every statistic.</li>
+      <li data-i18n="sources.rule10">Never reproduce proprietary charts from paid reports — all visuals here use only the publicly cited figures.</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p><strong data-i18n="footer.p1Bold">Indonesia Pet-Care Market Opportunity — Starting with Cat Litter.</strong> <span data-i18n="footer.p1">Preliminary market-feasibility proposal prepared October 2026 for discussion between prospective business partners. Not an offer, prospectus, or investment advice.</span></p>
+    <p><span data-i18n="footer.p2">Market statistics are sourced from Euromonitor International and PetfoodIndustry (see Sources &amp; Methodology). Unit-economics figures, cost assumptions, and simulator outputs are illustrative and have not been confirmed by any supplier, marketplace, or distributor.</span> <a class="back-to-top" href="#market" data-i18n="footer.backToTop">Back to top ↑</a></p>
+  </div>
+</footer>
+
+</div>
+
+<script src="i18n.js"></script>
+<script src="data.js"></script>
+<script src="charts.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
