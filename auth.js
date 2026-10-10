@@ -13,11 +13,11 @@
  * To change the password: compute a new SHA-256 hex digest and replace
  * TARGET_HASH below, e.g. in Node:
  *   node -e "console.log(require('crypto').createHash('sha256').update('your-new-password').digest('hex'))"
- * Current password: nekonomic-indonesia
+ * Current password: Nk7$pWx3mR!q9
  */
 (function () {
-  var UNLOCK_KEY = "nekonomic_unlocked_v1";
-  var TARGET_HASH = "84ae6ab5458e11bba813954206b80f976491e676761dbd7d67ad876c153d77a1";
+  var UNLOCK_KEY = "nekonomic_unlocked_v2";
+  var TARGET_HASH = "ca79bb99369c5a6811be18d2ad1f311537dc00dff9735d211b79fb48a666e5b2";
 
   function setLocked(locked) {
     document.documentElement.classList.toggle("locked", locked);
